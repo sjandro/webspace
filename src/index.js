@@ -5,8 +5,8 @@ import './styles.css'
 class App extends Component {
 	render() {
 		return (
-			<div>
-				<h1>Site under contruction</h1>
+			<div className="content">
+				<span>Site under contruction...</span>
 			</div>
 		)
 	}
