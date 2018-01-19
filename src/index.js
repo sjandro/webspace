@@ -6,7 +6,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="content">
-				<span>Site under contruction...</span>
+				<div>Hello,</div>
+				<div>If you see this I want you to know you are incredible!</div>
 			</div>
 		)
 	}
