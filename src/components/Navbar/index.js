@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './styles.css'
-import LinkedinIcon from '../../assets/img/linkedin.svg'
 
 class Navbar extends Component {
   render() {
