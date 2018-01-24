@@ -1,4 +1,5 @@
-.content {
-  font-family: 'Abel', sans-serif;
-  font-size: 42px;
+body {
+ margin: 0px;
+ font-family: 'Abel', sans-serif;
+ background-color: rgb(251, 251, 251);
 }
