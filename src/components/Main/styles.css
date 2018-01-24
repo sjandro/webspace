@@ -1,7 +1,13 @@
 .profile-img {
   border-radius: 50%;
   object-fit: cover;
-  height: 270px;
+  height: 250px;
+}
+
+.bio-container {
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .social-icon {
@@ -15,7 +21,7 @@
 
 .main-card {
   padding: 16px;
-  width: 80%;
+  width: 70%;
   display: flex;
   overflow: auto;
   margin: 0 auto;

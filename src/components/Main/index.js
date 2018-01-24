@@ -9,9 +9,15 @@ const MainView = (props) => {
         alt="profile.jpg"
         className="profile-img"
       />
-      <div>
-        <div>Hello,</div>
+      <div className="bio-container">
+        <div><strong>Hello,</strong></div>
         <div>If you see this I want you to know you are incredible!</div>
+        <br/>
+        <br/>
+        <div>This site is under construction and in all honestly I have no idea what this site will entail. Stay tuned! 😅</div>
+        <br/>
+        <div>You may follow me or get in contact with me through these sites:</div>
+        <br/>
         <div>
           <a href="https://www.linkedin.com/in/salazar6" target="_blank">
             <img
