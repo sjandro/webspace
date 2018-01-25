@@ -17,7 +17,7 @@
 }
 
 .social-icon:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .main-card {
@@ -27,8 +27,7 @@
   flex-flow: row wrap;
   justify-content: space-around;
   overflow: auto;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 70px auto;
   background: white;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
