@@ -6,19 +6,12 @@ import Navbar from './components/Navbar'
 import Main from './components/Main'
 
 class App extends Component {
-	render() {
-		return (
-			<div className="content">
-				<Navbar />
-				<Main />
-			</div>
-		)
-	}
+  render() {
+    return <div className="content">{/* <Navbar />
+				<Main /> */}</div>
+  }
 }
 
 // ========================================
 
-ReactDOM.render(
-	<App />,
-	document.getElementById('root')
-)
+ReactDOM.render(<App />, document.getElementById('root'))
