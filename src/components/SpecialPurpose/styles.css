@@ -15,6 +15,7 @@
   width: 85%;
   max-width: 450px;
   position: relative;
+  z-index: 2;
 }
 
 .card .shrub {
@@ -25,12 +26,13 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 3;
 }
 .card .shrub1 {
   max-width: 150px;
-  max-height: 180px;
-  width: 25%;
-  height: 30%;
+  max-height: 250px;
+  width: 30%;
+  height: 40%;
   position: absolute;
   right: 0;
   top: 0;
