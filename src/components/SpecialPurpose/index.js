@@ -18,7 +18,7 @@ class SpecialPurpose extends Component {
             JANELLE <span>&</span> ALEJANDRO
           </div>
           <div className="cursive card-text">June 22, 2019, Tampa</div>
-          <div className="cursive card-text">Invitation to Follow</div>
+          <div className="cursive card-text">Invitation to follow</div>
         </div>
       </div>
     )
