@@ -1,5 +1,11 @@
 body {
- margin: 0px;
- font-family: 'Abel', sans-serif;
- background-color: rgb(251, 251, 251);
+  margin: 0px;
+  font-family: 'Abel', sans-serif;
+  background-color: #b7e8e3;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  margin: 2em 0;
 }
