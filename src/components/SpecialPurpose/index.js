@@ -12,16 +12,16 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Card from 'react-bootstrap/Card'
 
-const CAVU = '27.9585704,-82.459988'
-const ALEJANDRO = '28.2207728,-82.3097245'
-const JANELLE = '28.184542,-82.341987'
+const CAVU = '27.9585704%2C-82.459988'
+const ALEJANDRO = '28.2207728%2C-82.3097245'
+const JANELLE = '28.184542%2C-82.341987'
 class SpecialPurpose extends Component {
   mapsSelector = (coord, type) => {
     if (type === 'google')
       window.open(`https://maps.google.com/maps?daddr=${coord}&amp;ll=`)
     if (type === 'apple')
       window.open(`maps://maps.google.com/maps?daddr=${coord}&amp;ll=`)
-    if (type === 'waze') window.open(`http://waze.to/?daddr=${coord}`)
+    if (type === 'waze') window.open(`http://waze.to/?ll=${coord}`)
     this.close()
   }
 
