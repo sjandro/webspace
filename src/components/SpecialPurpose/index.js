@@ -16,15 +16,17 @@ const ALEJANDRO = '28.2207775,-82.3119133'
 const JANELLE = '28.1845467,-82.3441757'
 class SpecialPurpose extends Component {
   mapsSelector = (coord) => {
-    // if (
-    //   /* if we're on iOS, open in Apple Maps */
-    //   navigator.platform.indexOf('iPhone') != -1 ||
-    //   navigator.platform.indexOf('iPad') != -1 ||
-    //   navigator.platform.indexOf('iPod') != -1
-    // )
-    //   window.open(`maps://maps.google.com/maps?daddr=${coord}&amp;ll=`)
-    // /* else use Google */ else
     window.open(`https://maps.google.com/maps?daddr=${coord}&amp;ll=`)
+  }
+
+  state = { tab: 'itinerary', subTab: 'food' }
+
+  changeMainTab = (tab) => this.setState({ tab })
+
+  changeSubTab = (subTab) => this.setState({ subTab })
+
+  goToSubTab = (subTab) => {
+    this.setState({ tab: 'menu' }, () => this.changeSubTab(subTab))
   }
 
   render() {
@@ -32,18 +34,23 @@ class SpecialPurpose extends Component {
       <Card>
         <Card.Img variant="top" src={coverImage} />
         <Card.Body>
-          <Tabs defaultActiveKey="itinerary" id="uncontrolled-tab-example">
+          <Tabs
+            className="main-nav"
+            defaultActiveKey="itinerary"
+            activeKey={this.state.tab}
+            onSelect={this.changeMainTab}
+          >
             <Tab eventKey="itinerary" title="Itinerary">
-              <Itinerary clickHandler={this.mapsSelector} />
+              <Itinerary
+                clickHandler={this.mapsSelector}
+                goToSubTab={this.goToSubTab}
+              />
             </Tab>
-            {/* <Tab eventKey="food" title="Food">
-              <Food />
-            </Tab>
-            <Tab eventKey="drinks" title="Drinks">
-              <Drinks />
-            </Tab> */}
             <Tab eventKey="menu" title="Menu">
-              <Menu />
+              <Menu
+                changeSubTab={this.changeSubTab}
+                subTab={this.state.subTab}
+              />
             </Tab>
             <Tab eventKey="save-the-date" title="Invite">
               <SaveTheDate />
@@ -55,7 +62,7 @@ class SpecialPurpose extends Component {
   }
 }
 
-const Itinerary = ({ clickHandler }) => {
+const Itinerary = ({ clickHandler, goToSubTab }) => {
   return (
     <div className="itinerary">
       <Card.Title className="header">Alejandro + Boys' Party</Card.Title>
@@ -64,9 +71,10 @@ const Itinerary = ({ clickHandler }) => {
         <Card.Subtitle className="mb-2 text-muted ">
           4403 Yans Ct.
         </Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted ">
+        <Card.Subtitle className="text-muted ">
           Wesley Chapel, FL, 33543
         </Card.Subtitle>
+        <div className="indicator">CLICK FOR DIRECTIONS</div>
       </div>
       <br />
       <Card.Title className="header">Janelle + Girls' Party</Card.Title>
@@ -75,9 +83,10 @@ const Itinerary = ({ clickHandler }) => {
         <Card.Subtitle className="mb-2 text-muted ">
           1912 Twisting Ln.
         </Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted ">
+        <Card.Subtitle className="text-muted ">
           Wesley Chapel, FL, 33543
         </Card.Subtitle>
+        <div className="indicator">CLICK FOR DIRECTIONS</div>
       </div>
       <br />
       <Card.Title className="header ">Wedding Ceremony + Reception</Card.Title>
@@ -87,9 +96,10 @@ const Itinerary = ({ clickHandler }) => {
         <Card.Subtitle className="mb-2 text-muted">
           1601 N. Franklin St.
         </Card.Subtitle>
-        <Card.Subtitle className="mb-2 text-muted">
+        <Card.Subtitle className="text-muted">
           Tampa, Florida, 33602
         </Card.Subtitle>
+        <div className="indicator">CLICK FOR DIRECTIONS</div>
       </div>
 
       <Card.Text className="sub-header">6:30PM</Card.Text>
@@ -101,14 +111,18 @@ const Itinerary = ({ clickHandler }) => {
       <Card.Subtitle className="mb-2 text-muted">
         Cocktail Hour on the Patio (Room Flip)
       </Card.Subtitle>
-      <Card.Subtitle className="mb-2 text-muted">
+      <Card.Subtitle className="text-muted">
         <i>4-Hr. Open Bar Begins</i>
       </Card.Subtitle>
+      <div className="indicator clickable" onClick={() => goToSubTab('drinks')}>
+        CLICK TO SEE MENU
+      </div>
 
       <Card.Text className="sub-header">~7:45PM</Card.Text>
-      <Card.Subtitle className="mb-2 text-muted">
-        Dinner Served (See Menu)
-      </Card.Subtitle>
+      <Card.Subtitle className="text-muted">Dinner Served</Card.Subtitle>
+      <div className="indicator clickable" onClick={() => goToSubTab('food')}>
+        CLICK TO SEE MENU
+      </div>
 
       <Card.Text className="sub-header">~8:00PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
@@ -116,9 +130,12 @@ const Itinerary = ({ clickHandler }) => {
       </Card.Subtitle>
 
       <Card.Text className="sub-header">~8:30PM</Card.Text>
-      <Card.Subtitle className="mb-2 text-muted">
-        Coffee and Dessert Served (See Menu)
+      <Card.Subtitle className="text-muted">
+        Coffee and Dessert Served
       </Card.Subtitle>
+      <div className="indicator clickable" onClick={() => goToSubTab('food')}>
+        CLICK TO SEE MENU
+      </div>
 
       <Card.Text className="sub-header">~8:45PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
@@ -139,12 +156,13 @@ const Itinerary = ({ clickHandler }) => {
   )
 }
 
-const Menu = () => {
+const Menu = ({ subTab, changeSubTab }) => {
   return (
     <Tabs
       defaultActiveKey="food"
+      activeKey={subTab}
+      onSelect={changeSubTab}
       className="menu-tabs"
-      id="uncontrolled-tab-example"
     >
       <Tab eventKey="food" title="Food">
         <Food />
