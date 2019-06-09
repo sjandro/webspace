@@ -102,7 +102,7 @@ const Itinerary = ({ clickHandler }) => {
         Cocktail Hour on the Patio (Room Flip)
       </Card.Subtitle>
       <Card.Subtitle className="mb-2 text-muted">
-        4-Hr. Open Bar Begins
+        <i>4-Hr. Open Bar Begins</i>
       </Card.Subtitle>
 
       <Card.Text className="sub-header">~7:45PM</Card.Text>
