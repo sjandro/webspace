@@ -21,7 +21,7 @@ class SpecialPurpose extends Component {
       window.open(`https://maps.google.com/maps?daddr=${coord}&amp;ll=`)
     if (type === 'apple')
       window.open(`maps://maps.google.com/maps?daddr=${coord}&amp;ll=`)
-    if (type === 'waze') window.open(`"https://waze.com/ul?q=${coord}`)
+    if (type === 'waze') window.open(`https://waze.com/ul?q=${coord}`)
     this.close()
   }
 
