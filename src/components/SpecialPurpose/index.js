@@ -38,14 +38,14 @@ const Itinerary = () => {
   return (
     <div className="itinerary">
       <Card.Title className="header">Alejandro + Boy’s Party</Card.Title>
-      <Card.Text className="sub-header">Thursday, 6/20 @ 4PM</Card.Text>
+      <Card.Text className="sub-header">Thursday, 6/20 @ 4:00PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">4403 Yans Ct.</Card.Subtitle>
       <Card.Subtitle className="mb-2 text-muted">
         Wesley Chapel, FL, 33543
       </Card.Subtitle>
       <br />
       <Card.Title className="header">Janelle + Girl’s Party</Card.Title>
-      <Card.Text className="sub-header">Thursday, 6/20 @ 4PM</Card.Text>
+      <Card.Text className="sub-header">Thursday, 6/20 @ 4:00PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
         1912 Twisting Ln.
       </Card.Subtitle>
