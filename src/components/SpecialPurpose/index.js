@@ -88,7 +88,7 @@ const Itinerary = ({ clickHandler }) => {
           1601 N. Franklin St.
         </Card.Subtitle>
         <Card.Subtitle className="mb-2 text-muted">
-          Tampa Florida, 33602
+          Tampa, Florida, 33602
         </Card.Subtitle>
       </div>
 
