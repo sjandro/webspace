@@ -37,14 +37,14 @@ class SpecialPurpose extends Component {
 const Itinerary = () => {
   return (
     <div className="itinerary">
-      <Card.Title className="header">Alejandro + Boy’s Party</Card.Title>
+      <Card.Title className="header">Alejandro + Boys' Party</Card.Title>
       <Card.Text className="sub-header">Thursday, 6/20 @ 4:00PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">4403 Yans Ct.</Card.Subtitle>
       <Card.Subtitle className="mb-2 text-muted">
         Wesley Chapel, FL, 33543
       </Card.Subtitle>
       <br />
-      <Card.Title className="header">Janelle + Girl’s Party</Card.Title>
+      <Card.Title className="header">Janelle + Girls' Party</Card.Title>
       <Card.Text className="sub-header">Thursday, 6/20 @ 4:00PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
         1912 Twisting Ln.
@@ -118,12 +118,11 @@ const Menu = () => {
       <Card.Subtitle className="mb-2 text-muted">
         pork shoulder. scratch made mojo sauce.
       </Card.Subtitle>
-      <br />
+
       <Card.Text className="sub-header">Garlic Roasted Chicken</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
         free range. roasted garlic. citrus.
       </Card.Subtitle>
-      <br />
 
       <Card.Text className="sub-header">2.0.1.5 Chopped Salad</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
