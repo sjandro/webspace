@@ -101,6 +101,7 @@ const Itinerary = ({ clickHandler, goToSubTab }) => {
         </Card.Subtitle>
         <div className="indicator">CLICK FOR DIRECTIONS</div>
       </div>
+      <br />
 
       <Card.Text className="sub-header">6:30PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
