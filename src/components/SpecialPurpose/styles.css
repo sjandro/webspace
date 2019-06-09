@@ -114,12 +114,14 @@
 }
 
 .main-nav,
-.menu-tabs {
+.menu-tabs,
+.invite-nav {
   display: flex;
   justify-content: center;
 }
 
-.menu-tabs {
+.menu-tabs,
+.invite-nav {
   margin-top: 30px;
 }
 
