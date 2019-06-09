@@ -129,3 +129,13 @@
   color: #acacac;
   font-weight: 100;
 }
+
+.map-bttn {
+  background: #a34b4b;
+  border-color: #a34b4b;
+}
+
+.map-bttn:hover {
+  background: #cd9b9b;
+  border-color: #cd9b9b;
+}

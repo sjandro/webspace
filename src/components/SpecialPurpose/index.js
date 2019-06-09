@@ -7,19 +7,30 @@ import shrub1 from '../../assets/img/shrub1.png'
 import greenLeaf from '../../assets/img/greenLeaf.png'
 
 import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Card from 'react-bootstrap/Card'
 
-const CAVU = '27.9585751,-82.4621767'
-const ALEJANDRO = '28.2207775,-82.3119133'
-const JANELLE = '28.1845467,-82.3441757'
+const CAVU = '27.9585704,-82.459988'
+const ALEJANDRO = '28.2207728,-82.3097245'
+const JANELLE = '28.184542,-82.341987'
 class SpecialPurpose extends Component {
-  mapsSelector = (coord) => {
-    window.open(`https://maps.google.com/maps?daddr=${coord}&amp;ll=`)
+  mapsSelector = (coord, type) => {
+    if (type === 'google')
+      window.open(`https://maps.google.com/maps?daddr=${coord}&amp;ll=`)
+    if (type === 'apple')
+      window.open(`maps://maps.google.com/maps?daddr=${coord}&amp;ll=`)
+    if (type === '') window.open(`http://waze.to/?ll=${coord}`)
+    this.close()
   }
 
-  state = { tab: 'itinerary', subTab: 'food' }
+  state = { tab: 'itinerary', subTab: 'food', modal: false }
+
+  open = (address, addressText) =>
+    this.setState({ modal: true, address, addressText })
+
+  close = () => this.setState({ modal: false })
 
   changeMainTab = (tab) => this.setState({ tab })
 
@@ -41,10 +52,7 @@ class SpecialPurpose extends Component {
             onSelect={this.changeMainTab}
           >
             <Tab eventKey="itinerary" title="Itinerary">
-              <Itinerary
-                clickHandler={this.mapsSelector}
-                goToSubTab={this.goToSubTab}
-              />
+              <Itinerary goToSubTab={this.goToSubTab} open={this.open} />
             </Tab>
             <Tab eventKey="menu" title="Menu">
               <Menu
@@ -57,17 +65,26 @@ class SpecialPurpose extends Component {
             </Tab>
           </Tabs>
         </Card.Body>
+        <MapModal
+          show={this.state.modal}
+          handleClose={this.mapsSelector}
+          address={this.state.address}
+          addressText={this.state.addressText}
+        />
       </Card>
     )
   }
 }
 
-const Itinerary = ({ clickHandler, goToSubTab }) => {
+const Itinerary = ({ goToSubTab, open }) => {
   return (
     <div className="itinerary">
       <Card.Title className="header">Alejandro + Boys' Party</Card.Title>
       <Card.Text className="sub-header">Thursday, 6/20 @ 4:00PM</Card.Text>
-      <div className="clickable" onClick={() => clickHandler(ALEJANDRO)}>
+      <div
+        className="clickable"
+        onClick={() => open(ALEJANDRO, "Alejandro + Boys' Party")}
+      >
         <Card.Subtitle className="mb-2 text-muted ">
           4403 Yans Ct.
         </Card.Subtitle>
@@ -79,7 +96,10 @@ const Itinerary = ({ clickHandler, goToSubTab }) => {
       <br />
       <Card.Title className="header">Janelle + Girls' Party</Card.Title>
       <Card.Text className="sub-header">Thursday, 6/20 @ 4:00PM</Card.Text>
-      <div className="clickable" onClick={() => clickHandler(JANELLE)}>
+      <div
+        className="clickable"
+        onClick={() => open(JANELLE, "Janelle + Girls' Party")}
+      >
         <Card.Subtitle className="mb-2 text-muted ">
           1912 Twisting Ln.
         </Card.Subtitle>
@@ -91,7 +111,7 @@ const Itinerary = ({ clickHandler, goToSubTab }) => {
       <br />
       <Card.Title className="header ">Wedding Ceremony + Reception</Card.Title>
       <Card.Text className="sub-header ">Saturday, 6/22 @ 6:30PM</Card.Text>
-      <div className="clickable" onClick={() => clickHandler(CAVU)}>
+      <div className="clickable" onClick={() => open(CAVU, 'CAVU')}>
         <Card.Subtitle className="mb-2 text-muted">CAVU Tampa</Card.Subtitle>
         <Card.Subtitle className="mb-2 text-muted">
           1601 N. Franklin St.
@@ -291,5 +311,39 @@ const SaveTheDate = () => (
     </div>
   </Fragment>
 )
+
+const MapModal = ({ show, handleClose, address, addressText }) => {
+  return (
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Header closeButton>
+        <Modal.Title>Get Directions</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>{`Open ${addressText} directions in your map app of choice!`}</Modal.Body>
+      <Modal.Footer>
+        <Button
+          className="map-bttn"
+          variant="primary"
+          onClick={() => handleClose(address, 'google')}
+        >
+          Google Maps
+        </Button>
+        <Button
+          className="map-bttn"
+          variant="primary"
+          onClick={() => handleClose(address, 'apple')}
+        >
+          Apple Maps
+        </Button>
+        <Button
+          className="map-bttn"
+          variant="primary"
+          onClick={() => handleClose(address, 'waze')}
+        >
+          Waze
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  )
+}
 
 export default SpecialPurpose
