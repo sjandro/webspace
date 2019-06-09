@@ -207,9 +207,9 @@ const Drinks = () => {
     <div className="drinks">
       <Card.Title className="header">Alcohol-Free</Card.Title>
       <Card.Text className="sub-header">Refreshments</Card.Text>
-      <Card.Subtitle className="mb-2 text-muted">
-        Water, Coffee, etc...
-      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Water,</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Coffee,</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">etc.</Card.Subtitle>
       <br />
       <Card.Title className="header">Alcohol</Card.Title>
       <Card.Text className="sub-header">Beer</Card.Text>
@@ -221,17 +221,38 @@ const Drinks = () => {
       </Card.Subtitle>
       <Card.Text className="sub-header">Red Wine</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
-        La Crema Pinot Noir (Monterey, CA); Hess Cabernet (Napa Allomi Vineyard,
-        CA);{' '}
+        La Crema Pinot Noir (Monterey, CA)
       </Card.Subtitle>
-      <Card.Text className="sub-header">Roséy/Sparkling Wine</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
-        La Crema Rosé (CA); La Vostra Prosecco (Italy){' '}
+        Hess Cabernet (Napa Allomi Vineyard, CA)
+      </Card.Subtitle>
+      <Card.Text className="sub-header">Rosé/Sparkling Wine</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        La Crema Rosé (CA),
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        La Vostra Prosecco (Italy)
       </Card.Subtitle>
       <Card.Text className="sub-header">Speciality Cocktail</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">Margarita</Card.Subtitle>
       <Card.Text className="sub-header">Liquors/Spirits</Card.Text>
-      <Card.Subtitle className="mb-2 text-muted">... </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Grey Goose Vodka,
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Hendricks Gin,</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Casa Amigos Blanco Tequilla,
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Bacardi Rum,</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Captain Morgan Spiced Rum,
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Jack Daniels Whiskey,
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Glenfiddich 12 year Scotch
+      </Card.Subtitle>
     </div>
   )
 }
