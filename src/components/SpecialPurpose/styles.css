@@ -108,3 +108,9 @@
 .clickable {
   cursor: pointer;
 }
+
+.menu-tabs {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}

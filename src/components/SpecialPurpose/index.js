@@ -36,11 +36,14 @@ class SpecialPurpose extends Component {
             <Tab eventKey="itinerary" title="Itinerary">
               <Itinerary clickHandler={this.mapsSelector} />
             </Tab>
-            <Tab eventKey="food" title="Food">
+            {/* <Tab eventKey="food" title="Food">
               <Food />
             </Tab>
             <Tab eventKey="drinks" title="Drinks">
               <Drinks />
+            </Tab> */}
+            <Tab eventKey="menu" title="Menu">
+              <Menu />
             </Tab>
             <Tab eventKey="save-the-date" title="Invite">
               <SaveTheDate />
@@ -104,7 +107,7 @@ const Itinerary = ({ clickHandler }) => {
 
       <Card.Text className="sub-header">~7:45PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
-        Dinner Served (See Food/Drinks)
+        Dinner Served (See Menu)
       </Card.Subtitle>
 
       <Card.Text className="sub-header">~8:00PM</Card.Text>
@@ -114,7 +117,7 @@ const Itinerary = ({ clickHandler }) => {
 
       <Card.Text className="sub-header">~8:30PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
-        Coffee and Dessert Served (See Food/Drinks)
+        Coffee and Dessert Served (See Menu)
       </Card.Subtitle>
 
       <Card.Text className="sub-header">~8:45PM</Card.Text>
@@ -133,6 +136,23 @@ const Itinerary = ({ clickHandler }) => {
       <Card.Text className="sub-header">11:59PM</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">Goodnight!</Card.Subtitle>
     </div>
+  )
+}
+
+const Menu = () => {
+  return (
+    <Tabs
+      defaultActiveKey="food"
+      className="menu-tabs"
+      id="uncontrolled-tab-example"
+    >
+      <Tab eventKey="food" title="Food">
+        <Food />
+      </Tab>
+      <Tab eventKey="drinks" title="Drinks">
+        <Drinks />
+      </Tab>
+    </Tabs>
   )
 }
 
