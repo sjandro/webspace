@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import './styles.css'
 
-import Navbar from './components/Navbar'
-import Main from './components/Main'
+// import Navbar from './components/Navbar'
+// import Main from './components/Main'
 import SpecialPurpose from './components/SpecialPurpose'
 
 class App extends Component {

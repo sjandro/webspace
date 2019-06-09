@@ -1,18 +1,22 @@
 .card {
-  position: relative;
+  text-align: center;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 85%;
+  width: 75%;
   max-width: 500px;
+  /* box-shadow: rgba(8, 35, 51, 0.05) 0px 3px 6px; */
+  /* margin-bottom: 16px; */
+  position: relative;
+  /* counter-increment: step 1;
+  border-radius: 8px;
   background: white;
-  padding: 0 10px;
-  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-  text-align: center;
+  padding: 10px 20px; */
+  /* padding: 40px; */
 }
 
 .card .cover {
   margin-top: 20px;
-  width: 85%;
+  width: 95%;
   max-width: 450px;
   position: relative;
   /* z-index: 2; */
@@ -74,4 +78,27 @@
   font-family: 'Tangerine', cursive;
   letter-spacing: 3px;
   color: #434343;
+}
+
+.menu {
+  margin-top: 30px;
+  line-height: 1.7;
+}
+
+.header {
+  color: #a34b4b;
+  font-weight: bold;
+}
+
+.sub-header {
+  color: #cd9b9b;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #acacac;
+}
+
+.nav-link:hover {
+  color: #cd9b9b;
 }
