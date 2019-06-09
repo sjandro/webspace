@@ -24,7 +24,7 @@ class SpecialPurpose extends Component {
             <Tab eventKey="menu" title="Menu">
               <Menu />
             </Tab>
-            <Tab eventKey="save-the-date" title="Save The Date">
+            <Tab eventKey="save-the-date" title="Invite">
               <SaveTheDate />
             </Tab>
           </Tabs>
@@ -87,7 +87,7 @@ const SaveTheDate = () => (
         JANELLE <span>&</span> ALEJANDRO
       </div>
       <div className="cursive card-text">June 22, 2019, Tampa</div>
-      <div className="cursive card-text">Invitation to follow</div>
+      <div className="cursive card-text">Invitation sent</div>
     </div>
   </Fragment>
 )
