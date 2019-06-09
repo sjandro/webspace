@@ -81,7 +81,8 @@
 }
 
 .menu,
-.itinerary {
+.itinerary,
+.drinks {
   margin-top: 30px;
   line-height: 1.7;
 }
@@ -102,4 +103,8 @@
 
 .nav-link:hover {
   color: #cd9b9b;
+}
+
+.clickable {
+  cursor: pointer;
 }
