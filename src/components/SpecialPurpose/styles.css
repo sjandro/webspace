@@ -80,7 +80,8 @@
   color: #434343;
 }
 
-.menu {
+.menu,
+.itinerary {
   margin-top: 30px;
   line-height: 1.7;
 }

@@ -17,9 +17,9 @@ class SpecialPurpose extends Component {
       <Card>
         <Card.Img variant="top" src={coverImage} />
         <Card.Body>
-          <Tabs defaultActiveKey="menu" id="uncontrolled-tab-example">
+          <Tabs defaultActiveKey="itinerary" id="uncontrolled-tab-example">
             <Tab eventKey="itinerary" title="Itinerary">
-              <div />
+              <Itinerary />
             </Tab>
             <Tab eventKey="menu" title="Menu">
               <Menu />
@@ -32,6 +32,82 @@ class SpecialPurpose extends Component {
       </Card>
     )
   }
+}
+
+const Itinerary = () => {
+  return (
+    <div className="itinerary">
+      <Card.Title className="header">Alejandro + Boy’s Party</Card.Title>
+      <Card.Text className="sub-header">Thursday, 6/20 @ 4PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">4403 Yans Ct.</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Wesley Chapel, FL, 33543
+      </Card.Subtitle>
+      <br />
+      <Card.Title className="header">Janelle + Girl’s Party</Card.Title>
+      <Card.Text className="sub-header">Thursday, 6/20 @ 4PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        1912 Twisting Ln.
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Wesley Chapel, FL, 33543
+      </Card.Subtitle>
+      <br />
+      <Card.Title className="header">Wedding Ceremony + Reception</Card.Title>
+      <Card.Text className="sub-header">Saturday, 6/22 @ 6:30PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">CAVU Tampa</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        1601 N. Franklin St.
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Tampa Florida, 33602
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">6:30PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Everyone Seated, Ceremony Begins
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">~7:00PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Cocktail Hour on the Patio (Room Flip)
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        4-Hr. Open Bar Begins
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">~7:45PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Dinner Served (See “Menu”)
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">~8:00PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        First Dance + Parents/Grandparents Dances
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">~8:30PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Coffee and Dessert Served (See “Menu”)
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">~8:45PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Dance Floor Opens
+      </Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">
+        Dancing, Photos, Memories
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">11:00PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Open Bar Service Ends, Cash Bar Begins
+      </Card.Subtitle>
+
+      <Card.Text className="sub-header">11:59PM</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">Goodnight!</Card.Subtitle>
+    </div>
+  )
 }
 
 const Menu = () => {
@@ -69,12 +145,6 @@ const Menu = () => {
     </div>
   )
 }
-
-// const EventInfo = () => {
-//   return(
-
-//   )
-// }
 
 const SaveTheDate = () => (
   <Fragment>
