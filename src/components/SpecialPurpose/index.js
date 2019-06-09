@@ -21,7 +21,7 @@ class SpecialPurpose extends Component {
       window.open(`https://maps.google.com/maps?daddr=${coord}&amp;ll=`)
     if (type === 'apple')
       window.open(`maps://maps.google.com/maps?daddr=${coord}&amp;ll=`)
-    if (type === '') window.open(`http://waze.to/?ll=${coord}`)
+    if (type === 'waze') window.open(`http://waze.to/?ll=${coord}`)
     this.close()
   }
 
@@ -313,6 +313,15 @@ const SaveTheDate = () => (
 )
 
 const MapModal = ({ show, handleClose, address, addressText }) => {
+  const iOSSafari = () => {
+    const userAgent = window.navigator.userAgent
+    return (
+      /iP(ad|od|hone)/i.test(userAgent) &&
+      /WebKit/i.test(userAgent) &&
+      !/(CriOS|FxiOS|OPiOS|mercury)/i.test(userAgent)
+    )
+  }
+
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -327,13 +336,15 @@ const MapModal = ({ show, handleClose, address, addressText }) => {
         >
           Google Maps
         </Button>
-        <Button
-          className="map-bttn"
-          variant="primary"
-          onClick={() => handleClose(address, 'apple')}
-        >
-          Apple Maps
-        </Button>
+        {iOSSafari() && (
+          <Button
+            className="map-bttn"
+            variant="primary"
+            onClick={() => handleClose(address, 'apple')}
+          >
+            Apple Maps
+          </Button>
+        )}
         <Button
           className="map-bttn"
           variant="primary"
