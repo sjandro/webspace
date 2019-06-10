@@ -141,3 +141,13 @@
   background: #cd9b9b;
   border-color: #cd9b9b;
 }
+
+.timestamp {
+  line-height: 1;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.address {
+  margin-top: 5px;
+}
