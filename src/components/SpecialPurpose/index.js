@@ -123,11 +123,13 @@ const Itinerary = ({ goToSubTab, open }) => {
       <br />
 
       <Card.Text className="sub-header">6:30PM</Card.Text>
+      <div>👰🤵</div>
       <Card.Subtitle className="mb-2 text-muted">
         Everyone Seated, Ceremony Begins
       </Card.Subtitle>
 
       <Card.Text className="sub-header">~7:00PM</Card.Text>
+      <div>🥂🌴</div>
       <Card.Subtitle className="mb-2 text-muted">
         Cocktail Hour on the Patio (Room Flip)
       </Card.Subtitle>
@@ -139,17 +141,20 @@ const Itinerary = ({ goToSubTab, open }) => {
       </div>
 
       <Card.Text className="sub-header">~7:45PM</Card.Text>
+      <div>🥗🍽</div>
       <Card.Subtitle className="text-muted">Dinner Served</Card.Subtitle>
       <div className="indicator clickable" onClick={() => goToSubTab('food')}>
         CLICK TO SEE MENU
       </div>
 
       <Card.Text className="sub-header">~8:00PM</Card.Text>
+      <div>🕺💃</div>
       <Card.Subtitle className="mb-2 text-muted">
         First Dance + Parents/Grandparents Dances
       </Card.Subtitle>
 
       <Card.Text className="sub-header">~8:30PM</Card.Text>
+      <div>☕️🍰</div>
       <Card.Subtitle className="text-muted">
         Coffee and Dessert Served
       </Card.Subtitle>
@@ -158,6 +163,7 @@ const Itinerary = ({ goToSubTab, open }) => {
       </div>
 
       <Card.Text className="sub-header">~8:45PM</Card.Text>
+      <div>🎵🎶</div>
       <Card.Subtitle className="mb-2 text-muted">
         Dance Floor Opens
       </Card.Subtitle>
@@ -166,11 +172,13 @@ const Itinerary = ({ goToSubTab, open }) => {
       </Card.Subtitle>
 
       <Card.Text className="sub-header">11:00PM</Card.Text>
+      <div>🍻🍹</div>
       <Card.Subtitle className="mb-2 text-muted">
         Open Bar Service Ends, Cash Bar Begins
       </Card.Subtitle>
 
       <Card.Text className="sub-header">11:59PM</Card.Text>
+      <div>👋</div>
       <Card.Subtitle className="mb-2 text-muted">Goodnight!</Card.Subtitle>
     </div>
   )
