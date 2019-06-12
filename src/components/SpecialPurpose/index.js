@@ -115,9 +115,7 @@ const Itinerary = ({ goToSubTab, open }) => {
         <Card.Subtitle className="mb-2 text-muted">
           1601 N. Franklin St.
         </Card.Subtitle>
-        <Card.Subtitle className="text-muted">
-          Tampa, Florida, 33602
-        </Card.Subtitle>
+        <Card.Subtitle className="text-muted">Tampa, FL, 33602</Card.Subtitle>
         <div className="indicator">CLICK FOR DIRECTIONS</div>
       </div>
       {/* <br /> */}
@@ -254,8 +252,8 @@ const Drinks = () => {
       <Card.Title className="header">Alcohol-Free</Card.Title>
       <Card.Text className="sub-header">Refreshments</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">Water,</Card.Subtitle>
-      <Card.Subtitle className="mb-2 text-muted">Coffee,</Card.Subtitle>
-      <Card.Subtitle className="mb-2 text-muted">etc.</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Soda,</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Coffee</Card.Subtitle>
       <br />
       <Card.Title className="header">Alcohol</Card.Title>
       <Card.Text className="sub-header">Beer</Card.Text>
@@ -341,7 +339,10 @@ const MapModal = ({ show, handleClose, address, addressText }) => {
       <Modal.Header closeButton>
         <Modal.Title>Get Directions</Modal.Title>
       </Modal.Header>
-      <Modal.Body>{`Open ${addressText} directions in your map app of choice!`}</Modal.Body>
+      <Modal.Body>
+        Open <strong>{addressText}</strong> directions in your map app of
+        choice!
+      </Modal.Body>
       <Modal.Footer>
         <Button
           className="map-bttn"
