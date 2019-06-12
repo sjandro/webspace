@@ -172,7 +172,7 @@ const Itinerary = ({ goToSubTab, open }) => {
       <div className="sub-header timestamp">11:00PM</div>
       <div>🍻🍹</div>
       <Card.Subtitle className="mb-2 text-muted">
-        Open Bar Service Ends, Cash Bar Begins
+        Open Bar Service Ends
       </Card.Subtitle>
 
       <div className="sub-header timestamp">11:59PM</div>
