@@ -260,7 +260,7 @@ const Drinks = () => {
       <Card.Title className="header">Alcohol</Card.Title>
       <Card.Text className="sub-header">Beer</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
-        Domestic (2): Corona, Budweiser
+        Domestic (2): Corona Light, Budweiser
       </Card.Subtitle>
       <Card.Subtitle className="mb-2 text-muted">
         Craft (2): Guayabera Citra Pale Ale, New Belgium Fat Tire
@@ -270,7 +270,7 @@ const Drinks = () => {
         La Crema Pinot Noir (Monterey, CA)
       </Card.Subtitle>
       <Card.Subtitle className="mb-2 text-muted">
-        Hess Cabernet (Napa Allomi Vineyard, CA)
+        Federalist Cabernet (Lodi, CA)
       </Card.Subtitle>
       <Card.Text className="sub-header">Rosé/Sparkling Wine</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
@@ -279,8 +279,8 @@ const Drinks = () => {
       <Card.Subtitle className="mb-2 text-muted">
         La Vostra Prosecco (Italy)
       </Card.Subtitle>
-      <Card.Text className="sub-header">Speciality Cocktail</Card.Text>
-      <Card.Subtitle className="mb-2 text-muted">Margarita</Card.Subtitle>
+      {/* <Card.Text className="sub-header">Speciality Cocktail</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">Margarita</Card.Subtitle> */}
       <Card.Text className="sub-header">Liquors/Spirits</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">
         Grey Goose Vodka,
