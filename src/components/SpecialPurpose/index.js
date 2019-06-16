@@ -252,8 +252,24 @@ const Drinks = () => {
       <Card.Title className="header">Alcohol-Free</Card.Title>
       <Card.Text className="sub-header">Refreshments</Card.Text>
       <Card.Subtitle className="mb-2 text-muted">Water,</Card.Subtitle>
-      <Card.Subtitle className="mb-2 text-muted">Soda,</Card.Subtitle>
-      <Card.Subtitle className="mb-2 text-muted">Coffee</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Coffee,</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Tonic Water,</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">Club Soda</Card.Subtitle>
+      <Card.Text className="sub-header">Soda</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Coke, Diet Coke, Sprite, Ginger Ale
+      </Card.Subtitle>
+      <Card.Text className="sub-header">Juice</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Orange Juice, Cranberry Juice, Pineapple Juice
+      </Card.Subtitle>
+      <Card.Text className="sub-header">Mixers</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">Grenadine</Card.Subtitle>
+      <Card.Text className="sub-header">Garnishes</Card.Text>
+      <Card.Subtitle className="mb-2 text-muted">
+        Limes, Lemons, Oranges, Olives, Mint, Cherries
+      </Card.Subtitle>
+
       <br />
       <Card.Title className="header">Alcohol</Card.Title>
       <Card.Text className="sub-header">Beer</Card.Text>
